@@ -15,8 +15,8 @@ resource "aws_route53_record" "example" {
   ttl             = 60
   type            = each.value.type
   zone_id         = aws_route53_zone.example.zone_id
+ }
 }
-
 
 data "aws_route53_zone" "example" {
   name         = "avxlab.cc"
